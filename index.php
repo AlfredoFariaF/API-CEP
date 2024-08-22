@@ -16,10 +16,10 @@
 </head>
 <body>
     <form method="post" action="login.php" onSubmit="return valida();">
-        <h2>Nome: </h2>
-        <input type="text" name="nome" id="nome">
-        <h2>cpf: </h2>
-        <input type="password" name="cpf" id="cpf"><br><br><br>
+        <h2>CPF: </h2>
+        <input type="text" name="cpf" id="cpf">
+        <h2>SENHA: </h2>
+        <input type="password" name="senha" id="senha"><br><br><br>
         <input type="submit" value="enviar">
     </form>
 </body>
