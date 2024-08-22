@@ -8,6 +8,7 @@ $sql= "select nome from usuarios where cpf = '$cpf' and senha = '$senha' ";
 $resultado = $conn->query($sql);
 $row = $resultado->fetch_assoc();
 //alfredo seu fdm fandangos de morango
+//vai se lascar
 if(isset($row) && $row["nome"] != ''){
     session_start();
     $_SESSION["cpf"] = $cpf;
