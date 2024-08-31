@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-weight: bold;
+    font-size: 2.4em;
+}
+#container_all{
+    width: 100%;
+    min-height: 100%;
+}
+#container_cabecalho{
+    width: 100%;
+    min-height: 9em;
+    background-color: gainsboro;
+    float: left;
+}
+#container_menu{
+    width: 20%;
+    min-height: 28em;
+    padding-top: 2em;
+    background-color: #BEBEBE;
+    text-align: center;
+    float: left;
+}
+#container_body{
+    width: 80%;
+    min-height: 30em;
+    background-color: grey;
+    float: left;
+}
+.apress{
+    margin: 1% 0% 0% 2%;
+    position: absolute; 
+}
+.sair_botao{
+    background-color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+    position: absolute; 
+    margin-left: 90%;
+    margin-top: 1%;
+    padding: 1em 2em 1em 2em;
+    border-radius: 2em;
+}
+.menu_opt{
+    font-size: 3em;
+}
