@@ -1,3 +1,8 @@
+<?php
+
+include("valida.php");
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,14 +15,11 @@
         <div id="container_cabecalho">
                 <h1>
                     <div class="apress">
-                        <?php 
-                        session_start();
-                        echo "Olá " .$_SESSION["nome"];
-                        ?>
+                        Olá <?=$_SESSION["nome"];?>
                     </div>
                 </h1>
-            <a href="">
-                <div class="sair_botao">
+            <a href="sair.php">
+                <div class="botao">
                     SAIR
                 </div>
             </a>

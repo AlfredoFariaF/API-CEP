@@ -11,6 +11,4 @@ if($conn->connect_error){
     die("fudeo". $conn->connect_error);
 }
 
-echo "conectado";
-
 ?>
