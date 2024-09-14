@@ -1,6 +1,9 @@
 <?php
 include("valida.php");
 ?>
+
+<!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <title>Primeiro</title>
@@ -19,6 +22,11 @@ include("valida.php");
                         SAIR
                     </div>
                 </a>
+            <a href="sair.php">
+                <div class="botao">
+                    SAIR
+                </div>
+            </a>
         </div>
         <div id="container_menu">
             <h2>MENU</h2>
