@@ -16,10 +16,14 @@ input.botaologin:hover{
     transform: translate(1px ,1px);
     background-color: #00008B;
 }
+h1.login{
+    font-size: 30px;
+}
 fieldset{
     border-radius: 10px;
     border: solid #ccc 2px;
     margin: auto;
+    text-align: center;
     margin-top: 10%;
     padding: 75px 75px 75px 75px;
     min-width: 193px;
