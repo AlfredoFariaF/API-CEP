@@ -4,9 +4,9 @@
     <title>Titulo</title>
     <script>
         function valida(){
-            nome = document.getElementById("nome").value;
-            idade = document.getElementById("idade").value;
-            if(nome == "" || idade == ""){
+            cpf = document.getElementById("cpf").value;
+            senha = document.getElementById("senha").value;
+            if(cpf == "" || senha == ""){
                 alert("Preencha todos os campos");
                 return false;
             }
@@ -20,7 +20,7 @@
         <input type="text" name="cpf" id="cpf">
         <h2>SENHA: </h2>
         <input type="password" name="senha" id="senha"><br><br><br>
-        <input type="submit" value="enviar">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>

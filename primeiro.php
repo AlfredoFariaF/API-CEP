@@ -1,5 +1,6 @@
-
-<!DOCTYPE html>
+<?php
+include("valida.php");
+?>
 <html lang="pt-br">
 <head>
     <title>Primeiro</title>
@@ -10,29 +11,26 @@
         <div id="container_cabecalho">
                 <h1>
                     <div class="apress">
-                        <?php 
-                        session_start();
-                        echo "Olá " .$_SESSION["nome"];
-                        ?>
+                        Olá <?=$_SESSION["nome"];?>
                     </div>
                 </h1>
-            <a href="">
-                <div class="sair_botao">
-                    SAIR
-                </div>
-            </a>
+                <a href="sair.php">
+                    <div class="botao">
+                        SAIR
+                    </div>
+                </a>
         </div>
         <div id="container_menu">
             <h2>MENU</h2>
-            <div id="menu_opt">
-                <a href="">OPÇÃO 1</a><br><br>
-                <a href="">OPÇÃO 2</a><br><br>
-                <a href="">OPÇÃO 3</a><br><br>
-                <a href="">OPÇÃO 4</a><br><br>
-                <a href="">OPÇÃO 5</a><br><br>
-            </div>
+                <a href="cadastrar.php"><div class="menu_opt">CADASTRAR USUARIO</div></a><br>
+                <a href="listar.php"><div class="menu_opt">LISTAR USUARIOS</div></a><br>    
+                <a href=""><div class="menu_opt">OPÇÃO 3</div></a><br>
         </div>
         <div id="container_body">
+            <center>
+                <h1>Home</h1>
+                <h2>Pagina principal</h2>
+            </center>
         </div>
     </div>
 </body>
