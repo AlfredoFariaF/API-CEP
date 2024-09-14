@@ -22,17 +22,12 @@ include("valida.php");
                         SAIR
                     </div>
                 </a>
-            <a href="sair.php">
-                <div class="botao">
-                    SAIR
-                </div>
-            </a>
         </div>
         <div id="container_menu">
             <h2>MENU</h2>
-                <a href="cadastrar.php"><div class="menu_opt">CADASTRAR USUARIO</div></a><br>
-                <a href="listar.php"><div class="menu_opt">LISTAR USUARIOS</div></a><br>    
-                <a href=""><div class="menu_opt">OPÇÃO 3</div></a><br>
+                <a class="menu" href="cadastrar.php">CADASTRAR USUARIO</a><br><br>
+                <a class="menu" href="listar.php">LISTAR USUARIOS</a><br><br> 
+                <a class="menu" href="">OPÇÃO 3</a><br>
         </div>
         <div id="container_body">
             <center>

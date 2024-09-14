@@ -2,6 +2,29 @@ html, body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+a{
+    text-decoration: none;
+}
+a.menu{
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+}
+a.menu:hover{
+    transform: translate(1px ,1px);
+    color: #00008B;
+    text-shadow: 3px 3px 10px grey;
+}
+a.home{
+    color: blue;
+    font-size: 23px;
+    font-weight: bold;
+}
+a.home:hover{
+    transform: translate(1px ,1px);
+    color: #00008B;
+    text-shadow: 3px 3px 10px grey;
+}
 h2{
     font-weight: bold;
     font-size: 2em;
@@ -37,16 +60,28 @@ h2{
     background-color: blue;
     font-weight: bold;
     text-decoration: none;
-    color: red;
-    position: absolute;
-    margin-left: 61%;
-    margin-top: 1%;
-    margin-right: 1%;
+    color: white;
+    margin-left: 87%;
+    margin-top: 3%;
+    margin-right: 2.5%;
     padding: 1em 2em 1em 2em;
     border-radius: 2em;
 }
-.menu_opt{
-    color: black;
+.botao:hover{
+    transform: translate(1px ,1px);
+    background-color: #00008B;
+}
+input.enviar{
+    background-color: blue;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 25px 15px 25px;
     text-decoration: none;
-    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px grey;
+}
+input.enviar:hover{
+    transform: translate(1px ,1px);
+    background-color: #00008B;
 }

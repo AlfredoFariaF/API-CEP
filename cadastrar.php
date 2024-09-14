@@ -28,7 +28,6 @@ include("valida.php");
                 </h1>
                 <a href="sair.php">
                     <div class="botao">
-                    
                         SAIR
                     </div>
                 </a>
@@ -36,23 +35,23 @@ include("valida.php");
         <div id="container_menu">
             <h2>MENU</h2>
             <div id="menu_opt">
-            <a href="cadastrar.php"><div class="menu_opt">CADASTRAR USUARIO</div></a><br>
-                <a href="listar.php"><div class="menu_opt">LISTAR USUARIOS</div></a><br>
-                <a href=""><div class="menu_opt">OPÇÃO 3</div></a><br><br><br>
-                <a href="primeiro.php"><div class="menu_opt">HOME</div></a>
+                <a class="menu" href="cadastrar.php">CADASTRAR USUARIO</a><br><br>
+                <a class="menu" href="listar.php">LISTAR USUARIOS</a><br><br> 
+                <a class="menu" href="">OPÇÃO 3</a><br><br><br><br>
+                <a class="home"href="primeiro.php">HOME</a>
             </div>
         </div>
         <div id="container_body">
             <center>
                 <h2>Cadastrar usuarios</h2>
                 <form method="post" action="cadastro.php" onSubmit="return valida();">
-                    <h3>CPF:</h3>
+                    <label for="cpf"><h3>CPF:</h3></label>
                     <input type="text" name="cpf" id="cpf">
-                    <h3>NOME:<h3>
+                    <label for="nome"><h3>NOME:</h3></label>
                     <input type="text" name="nome" id="nome">
-                    <h3>SENHA:</h3>
-                    <input type="text" name="senha" id="senha"><br><br><br>
-                    <input type="submit" value="Enviar">
+                    <label for="senha"><h3>SENHA:</h3></label>
+                    <input type="password" name="senha" id="senha"><br><br><br>
+                    <input class="enviar" type="submit" value="Enviar">
                 </form>
             </center>
         </div>

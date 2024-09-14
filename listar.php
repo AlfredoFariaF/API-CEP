@@ -5,6 +5,7 @@ include("valida.php");
 <head>
     <title>Primeiro</title>
     <link rel="stylesheet" href="css_primeiro.css">
+    <link rel="stylesheet" href="css_lista.css">
 </head>
 <body>
     <div id="container_all">
@@ -15,19 +16,16 @@ include("valida.php");
                     </div>
                 </h1>
                 <a href="sair.php">
-                    <div class="botao">
-                    
-                        SAIR
-                    </div>
+                    <div class="botao">SAIR</div>
                 </a>
         </div>
         <div id="container_menu">
             <h2>MENU</h2>
             <div id="menu_opt">
-            <a href="cadastrar.php"><div class="menu_opt">CADASTRAR USUARIO</div></a><br>
-                <a href="listar.php"><div class="menu_opt">LISTAR USUARIOS</div></a><br>
-                <a href=""><div class="menu_opt">OPÇÃO 3</div></a><br><br><br>
-                <a href="primeiro.php"><div class="menu_opt">HOME</div></a>
+                <a class="menu" href="cadastrar.php">CADASTRAR USUARIO</a><br><br>
+                <a class="menu" href="listar.php">LISTAR USUARIOS</a><br><br> 
+                <a class="menu" href="">OPÇÃO 3</a><br><br><br><br>
+                <a class="home"href="primeiro.php">HOME</a>
             </div>
         </div>
         <div id="container_body">
@@ -35,9 +33,9 @@ include("valida.php");
                 <h2>Listar usuarios</h2><br>
                 <table>
                     <tr>
-                        <td>CPF</td>
-                        <td>NOME</td>
-                        <td>SENHA</td>
+                        <td><div class="titulo">CPF</div></td>
+                        <td><div class="titulo">NOME</div></td>
+                        <td><div class="titulo">SENHA</div></td>
                     </tr>
                     <?php
                     include("conexao.php");
@@ -49,9 +47,9 @@ include("valida.php");
                     ?>
     
                     <tr>
-                        <td><?=$row["cpf"];?></td>
-                        <td><?=$row["nome"];?></td>
-                        <td><?=$row["senha"];?></td>
+                        <td><div class="corpo"><?=$row["cpf"];?></div></td>
+                        <td><div class="corpo"><?=$row["nome"];?></div></td>
+                        <td><div class="corpo"><?=$row["senha"];?></div></td>
                     </tr>
                     <?php
                     }
