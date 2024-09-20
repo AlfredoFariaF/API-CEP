@@ -27,7 +27,7 @@ include("valida.php");
             <h2>MENU</h2>
                 <a class="menu" href="cadastrar.php">CADASTRAR USUARIO</a><br><br>
                 <a class="menu" href="listar.php">LISTAR USUARIOS</a><br><br> 
-                <a class="menu" href="">OPÇÃO 3</a><br>
+                <a class="menu" href="alterar.php">ALTERAR CADASTRO</a><br>
         </div>
         <div id="container_body">
             <center>
