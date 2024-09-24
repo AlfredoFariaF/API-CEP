@@ -5,7 +5,7 @@ include("valida.php");
 <head>
     <title>Primeiro</title>
     <link rel="stylesheet" href="css_primeiro.css">
-    <link rel="stylesheet" href="css_lista.css">
+    <link rel="stylesheet" href="css_altera.css">
 </head>
 <body>
     <div id="container_all">
@@ -52,19 +52,19 @@ include("valida.php");
                         <form action="altera.php" method="post">
                             <input type="hidden" name="cpfantigo" value="<?=$row['cpf'];?>">
                             <td>
-                                <div class="corpo"><input type="text" name="cpf" value="<?=$row['cpf'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" name="cpf" value="<?=$row['cpf'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="text" name="nome" value="<?=$row['nome'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" name="nome" value="<?=$row['nome'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="text" name="senha" value="<?=$row['senha'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" name="senha" value="<?=$row['senha'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="submit" value="alterar"></div>
+                                <div class="corpo"><input type="submit" class="botaologin" value="Alterar">
+                            </div>
                             </td>
                         </form>
-                        
                     </tr>
                     <?php
                     }

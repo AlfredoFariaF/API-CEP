@@ -20,9 +20,9 @@
         <fieldset>
             <h1 class="login">BANCO DE DADOS</h1><br><br>
             <label for="cpf"><h2>CPF:</h2></label>
-            <input type="text" name="cpf" id="cpf">
+            <input type="text" class="form_style" name="cpf" id="cpf">
             <label for="senha"><h2>SENHA:</h2></label>
-            <input type="password" name="senha" id="senha"><br><br><br>
+            <input type="password" class="form_style" name="senha" id="senha"><br><br><br>
             <center>
                 <input class="botaologin"type="submit" value="Enviar">
             </center>

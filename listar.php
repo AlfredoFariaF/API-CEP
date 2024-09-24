@@ -30,9 +30,9 @@ include("valida.php");
         </div>
         <div id="container_body">
             <center>
-                <h2>Listar usuarios</h2><br>
+                <h2>Listar usuarios</h2>
                 <table>
-                    <tr>
+                    <tr id="cor_tabprim">
                         <td><div class="titulo">CPF</div></td>
                         <td><div class="titulo">NOME</div></td>
                         <td><div class="titulo">SENHA</div></td>
@@ -46,7 +46,7 @@ include("valida.php");
                     while($row = $resultado->fetch_assoc()){
                     ?>
     
-                    <tr>
+                    <tr id="cor_tabseg">
                         <td><div class="corpo"><?=$row["cpf"];?></div></td>
                         <td><div class="corpo"><?=$row["nome"];?></div></td>
                         <td><div class="corpo"><?=$row["senha"];?></div></td>

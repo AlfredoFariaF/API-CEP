@@ -5,6 +5,7 @@ include("valida.php");
 <head>
     <title>Primeiro</title>
     <link rel="stylesheet" href="css_primeiro.css">
+    <link rel="stylesheet" href="css_cadastro.css">
     <script>
         function valida(){
             nome = document.getElementById("nome").value;
@@ -46,11 +47,11 @@ include("valida.php");
                 <h2>Cadastrar usuarios</h2>
                 <form method="post" action="cadastro.php" onSubmit="return valida();">
                     <label for="cpf"><h3>CPF:</h3></label>
-                    <input type="text" name="cpf" id="cpf">
+                    <input type="text" class="form_style" name="cpf" id="cpf">
                     <label for="nome"><h3>NOME:</h3></label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" class="form_style" name="nome" id="nome">
                     <label for="senha"><h3>SENHA:</h3></label>
-                    <input type="password" name="senha" id="senha"><br><br><br>
+                    <input type="password" class="form_style" name="senha" id="senha"><br><br><br>
                     <input class="enviar" type="submit" value="Enviar">
                 </form>
             </center>
