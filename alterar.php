@@ -39,7 +39,14 @@ include("valida.php");
                         <td><div class="titulo">ALTERAR</div></td>
                     </tr>
                     <?php
+
+                    include("conexao.php");
+                    $sql = "select * from usuarios";
+                    $resultado = $conn->query($sql);
+
+                    
                     while($row = $resultado->fetch_assoc()){
+
                     ?>  
                     <tr>
                         <form action="altera.php" method="post">
