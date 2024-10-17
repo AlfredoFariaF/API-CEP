@@ -1,0 +1,38 @@
+html, body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input.botaologin{
+    background-color: blue;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px grey;
+}
+input.botaologin:hover{
+    transform: translate(1px ,1px);
+    background-color: #00008B;
+}
+h1.login{
+    font-size: 30px;
+}
+fieldset{
+    border-radius: 10px;
+    border: solid #ccc 2px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2%;
+    padding: 75px 75px 75px 75px;
+    min-width: 193px;
+    width: 10%;
+}
+.form_style {
+    outline: none;
+    border: 2px solid #264143;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 15px;
+  } 
