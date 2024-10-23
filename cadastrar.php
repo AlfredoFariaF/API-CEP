@@ -79,7 +79,7 @@ include("valida.php");
         <div id="container_body">
             <center>
                 <h2>Cadastrar usuarios</h2>
-                <form name="CadastroForm" method="post" action="cadastro.php" onSubmit="return validar(event);">
+                <form name="CadastroForm" method="post" action="cadastro.php" onSubmit="return validar(event)">
                     <label for="cpf"><h3>CPF:</h3></label>
                     <input type="text" class="form_style" name="cpf" id="cpf">
                     <label for="nome"><h3>NOME:</h3></label>

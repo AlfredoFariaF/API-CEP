@@ -6,8 +6,57 @@ include("valida.php");
     <title>Primeiro</title>
     <link rel="stylesheet" href="css_primeiro.css">
     <link rel="stylesheet" href="css_altera.css">
+    <script>
+        function validarCPF(cpf) {
+        
+            cpf = cpf.replace(/[^\d]+/g, '');
+            if (cpf.length !== 11){
+                return false;
+            }
+    
+            if (/^(\d)\1{10}$/.test(cpf)){
+                return false;
+            }
+
+            for (let i = 9; i < 11; i++){
+                let soma = 0;
+                let multiplicador = i + 1;
+                for (let j = 0; j < i; j++) {
+                    soma += parseInt(cpf.charAt(j)) * (multiplicador - j);
+                }
+                let digitoVerificador = (soma * 10) % 11;
+                if (digitoVerificador === 10 || digitoVerificador === 11){ 
+                    digitoVerificador = 0;
+                }
+                if (digitoVerificador !== parseInt(cpf.charAt(i))){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function validar(cpf){
+            
+            cpf = String(cpf).padStart(11, '0'); 
+        
+            nome = document.getElementById("nome"+cpf).value;
+            cpf_form = document.getElementById("cpf"+cpf).value;
+            senha = document.getElementById("senha"+cpf).value;
+        
+            if(nome == "" || cpf == "" || senha == ""){
+                alert("Preencha todos os campos");
+                return false;
+            }
+            if (!validarCPF(cpf_form)){
+                alert("Por favor, insira um CPF válido");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
+   
     <div id="container_all">
         <div id="container_cabecalho">
                 <h1>
@@ -49,16 +98,16 @@ include("valida.php");
 
                     ?>  
                     <tr>
-                        <form action="altera.php" method="post">
+                        <form name="alterarForm" action="altera.php" method="post" onSubmit="return validar(<?=$row['cpf'];?>)">
                             <input type="hidden" name="cpfantigo" value="<?=$row['cpf'];?>">
                             <td>
-                                <div class="corpo"><input type="text" class="form_style" name="cpf" value="<?=$row['cpf'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" id="cpf<?=$row['cpf'];?>" name="cpf" value="<?=$row['cpf'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="text" class="form_style" name="nome" value="<?=$row['nome'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" id="nome<?=$row['cpf'];?>" name="nome" value="<?=$row['nome'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="text" class="form_style" name="senha" value="<?=$row['senha'];?>"></div>
+                                <div class="corpo"><input type="text" class="form_style" id="senha<?=$row['cpf'];?>" name="senha" value="<?=$row['senha'];?>"></div>
                             </td>
                             <td>
                                 <div class="corpo"><input type="submit" class="botaologin" value="Alterar">
