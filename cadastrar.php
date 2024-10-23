@@ -7,12 +7,46 @@ include("valida.php");
     <link rel="stylesheet" href="css_primeiro.css">
     <link rel="stylesheet" href="css_cadastro.css">
     <script>
-        function valida(){
+        function validarCPF(cpf) {
+        
+            cpf = cpf.replace(/[^\d]+/g, '');
+            if (cpf.length !== 11){
+                return false;
+            }
+    
+            if (/^(\d)\1{10}$/.test(cpf)){
+                return false;
+            }
+
+            for (let i = 9; i < 11; i++){
+                let soma = 0;
+                let multiplicador = i + 1;
+                for (let j = 0; j < i; j++) {
+                    soma += parseInt(cpf.charAt(j)) * (multiplicador - j);
+                }
+                let digitoVerificador = (soma * 10) % 11;
+                if (digitoVerificador === 10 || digitoVerificador === 11){ 
+                    digitoVerificador = 0;
+                }
+                if (digitoVerificador !== parseInt(cpf.charAt(i))){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function validar(event){
             nome = document.getElementById("nome").value;
             cpf = document.getElementById("cpf").value;
             senha = document.getElementById("senha").value;
+
             if(nome == "" || cpf == "" || senha == ""){
                 alert("Preencha todos os campos");
+                return false;
+            }
+            if (!validarCPF(cpf)){
+                alert("Por favor, insira um CPF válido");
+                event.preventDefault();
                 return false;
             }
             return true;
@@ -45,7 +79,7 @@ include("valida.php");
         <div id="container_body">
             <center>
                 <h2>Cadastrar usuarios</h2>
-                <form method="post" action="cadastro.php" onSubmit="return valida();">
+                <form name="CadastroForm" method="post" action="cadastro.php" onSubmit="return validar(event);">
                     <label for="cpf"><h3>CPF:</h3></label>
                     <input type="text" class="form_style" name="cpf" id="cpf">
                     <label for="nome"><h3>NOME:</h3></label>
