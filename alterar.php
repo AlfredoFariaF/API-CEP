@@ -74,7 +74,7 @@ include("valida.php");
                 <a class="menu" href="cadastrar.php">CADASTRAR USUARIO</a><br><br>
                 <a class="menu" href="listar.php">LISTAR USUARIOS</a><br><br> 
                 <a class="menu" href="alterar.php">ALTERAR CADASTRO</a><br><br><br><br>
-                <a class="home"href="primeiro.php">HOMaaaE</a>
+                <a class="home"href="primeiro.php">HOME</a>
             </div>
         </div>
         <div id="container_body">
