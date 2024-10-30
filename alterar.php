@@ -7,8 +7,25 @@ include("valida.php");
     <link rel="stylesheet" href="css_primeiro.css">
     <link rel="stylesheet" href="css_altera.css">
     <script>
+    
+        <?php
+
+        if(isset($_GET['ERR']&&$_GET['ERR']==1)){
+            alert("Por favor, insira um CPF válido")
+        }
+
+        if(isset($_GET['ERR']&&$_GET['ERR']==2)){
+            alert("Por favor, inserir uma senha")
+        }
+
+        if(isset($_GET['ERR']&&$_GET['ERR']==3)){
+            alert("Por favor, inserir um nome")
+        }   
+
+        ?>
+
         function validarCPF(cpf) {
-        
+
             cpf = cpf.replace(/[^\d]+/g, '');
             if (cpf.length !== 11){
                 return false;
