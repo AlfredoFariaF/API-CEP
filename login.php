@@ -4,6 +4,16 @@ include("conexao.php");
 $cpf=$_POST["cpf"];
 $senha=$_POST["senha"];
 
+include("validador.php");
+
+if(!validarCPF($cpf)){
+    header("Location: index.php?ERR=1");
+}
+
+if(!validarSenha($senha)){
+    header("Location: index.php?ERR=2");
+}
+
 $sql= "select nome from usuarios where cpf = ? and senha = ? ";
 $stmt = $conn->prepare($sql);
 
