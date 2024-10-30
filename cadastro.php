@@ -5,9 +5,13 @@ $cpf=$_POST["cpf"];
 $nome=$_POST["nome"];
 $senha=$_POST["senha"];
 
-$sql="insert into `usuarios`(`cpf`, `nome`, `senha`) values ('$cpf','$nome','$senha')";
-$resultado = $conn->query($sql);
+$sql="insert into `usuarios`(`cpf`, `nome`, `senha`) values (?,?,?)";
+$stmt = $conn->prepare($sql);
 
-header("Location: cadastrar.php");
+if($stmt){
+    $stmt->bind_param("sss", $cpf,$nome, $senha);
+    $stmt->execute();
+    header("Location: cadastrar.php");
+}
 
 ?>

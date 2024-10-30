@@ -7,12 +7,15 @@ $nome= $_POST["nome"];
 $senha= $_POST["senha"];
 $cpfantigo= $_POST["cpfantigo"];
 
-$sql = "update usuarios set cpf = '$cpf', senha = '$senha', nome = '$nome' where cpf = '$cpfantigo'";
+$sql = "update usuarios set cpf = ?, senha = ?, nome = ? where cpf = ?";
+$stmt = $conn->prepare($sql);
 
-if(!$resultado = $conn->query($sql)){
+if($stmt){
+    $stmt->bind_param("ssss", $cpf, $senha, $nome, $cpfantigo);
+    $stmt->execute();
+    header("Location: alterar.php");
+
+}else{
     die("erro");
 }
-
-header("Location: alterar.php")
-
 ?>
