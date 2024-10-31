@@ -36,15 +36,6 @@ function validarNome($nome) {
     return true;
 }
 
-// Exemplo de uso
-$nome = $_POST['nome'] ?? ''; // Obtém o valor do campo de nome enviado via formulário
-
-if (validarNome($nome)) {
-    echo "Nome válido!";
-} else {
-    echo "O nome não pode estar vazio.";
-}
-
 function validarSenha($senha) {
     // Verifica se a senha está vazia ou é nula
     if (empty($senha)) {

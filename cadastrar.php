@@ -10,16 +10,16 @@ include("valida.php");
 
         <?php
 
-            if(isset($_GET['ERR']&&$_GET['ERR']==1)){
-                alert("Por favor, insira um CPF válido")
+            if(isset($_GET['ERR']) && $_GET['ERR']==1){
+                echo 'alert("Por favor, insira um CPF válido");';
             }
 
-            if(isset($_GET['ERR']&&$_GET['ERR']==2)){
-                alert("Por favor, inserir uma senha")
+            if(isset($_GET['ERR']) && $_GET['ERR']==2){
+                echo 'alert("Por favor, inserir uma senha");';
             }
 
-            if(isset($_GET['ERR']&&$_GET['ERR']==3)){
-                alert("Por favor, inserir um nome")
+            if(isset($_GET['ERR']) && $_GET['ERR']==3){
+                echo 'alert("Por favor, inserir um nome");';
             }
 
         ?>

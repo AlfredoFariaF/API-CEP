@@ -10,15 +10,18 @@ $cpfantigo= $_POST["cpfantigo"];
 include("validador.php");
 
 if(!validarCPF($cpf)){
-    header("Location: index.php?ERR=1");
+    header("Location: alterar.php?ERR=1");
+    return 1;
 }
 
 if(!validarSenha($senha)){
-    header("Location: index.php?ERR=2");
+    header("Location: alterar.php?ERR=2");
+    return 2;
 }
 
 if(!validarNome($nome)){
-    header("Location: index.php?ERR=3");
+    header("Location: alterar.php?ERR=3");
+    return 3;
 }
 
 $sql = "update usuarios set cpf = ?, senha = ?, nome = ? where cpf = ?";

@@ -8,10 +8,12 @@ include("validador.php");
 
 if(!validarCPF($cpf)){
     header("Location: index.php?ERR=1");
+    return 1;
 }
 
 if(!validarSenha($senha)){
     header("Location: index.php?ERR=2");
+    return 2;
 }
 
 $sql= "select nome from usuarios where cpf = ? and senha = ? ";

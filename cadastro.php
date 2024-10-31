@@ -7,16 +7,19 @@ $senha=$_POST["senha"];
 
 include("validador.php");
 
-if(!validarCPF($cpf)){
-    header("Location: index.php?ERR=1");
-}
 
+if(!validarCPF($cpf)){
+    header("Location: cadastrar.php?ERR=1");
+    return 1;
+}   
 if(!validarSenha($senha)){
-    header("Location: index.php?ERR=2");
+    header("Location: cadastrar.php?ERR=2");
+    return 2;
 }
 
 if(!validarNome($nome)){
-    header("Location: index.php?ERR=3");
+    header("Location: cadastrar.php?ERR=3");
+    return 3;
 }
 
 $sql="insert into `usuarios`(`cpf`, `nome`, `senha`) values (?,?,?)";
