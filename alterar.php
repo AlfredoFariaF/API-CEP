@@ -103,6 +103,7 @@ include("valida.php");
                         <td><div class="titulo">NOME</div></td>
                         <td><div class="titulo">SENHA</div></td>
                         <td><div class="titulo">ALTERAR</div></td>
+                        <td><div class="titulo">DELETAR</div></td>
                     </tr>
                     <?php
 
@@ -130,6 +131,10 @@ include("valida.php");
                                 <div class="corpo"><input type="submit" class="botaologin" value="Alterar">
                             </div>
                             </td>
+                        </form>
+                        <form method="post" action="delete.php">
+                            <input type="hidden" name="cpf" value="<?=$row['cpf'];?>">
+                            <td><input type="submit" class="botaologin" value="apagar"></td>
                         </form>
                     </tr>
                     <?php
