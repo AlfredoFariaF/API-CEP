@@ -1,6 +1,7 @@
 .titulo{
   color: #00008B;
   font-size: 20px;
+  margin-right: 12px;
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
@@ -12,7 +13,6 @@
 }
 .form_style {
   outline: none;
-  width: 10px;
   border: 2px solid #264143;
   padding: 5px 10px;
   border-radius: 4px;

@@ -119,22 +119,22 @@ include("valida.php");
                         <form name="alterarForm" action="altera.php" method="post" onSubmit="return validar(<?=$row['cpf'];?>)">
                             <input type="hidden" name="cpfantigo" value="<?=$row['cpf'];?>">
                             <td>
-                                <div class="corpo"><input type="text" class="form_style" id="cpf<?=$row['cpf'];?>" name="cpf" value="<?=$row['cpf'];?>"></div>
+                                <div class="corpo"><input type="text" size="12"class="form_style" id="cpf<?=$row['cpf'];?>" name="cpf" value="<?=$row['cpf'];?>"></div>
                             </td>
                             <td>
                                 <div class="corpo"><input type="text" class="form_style" id="nome<?=$row['cpf'];?>" name="nome" value="<?=$row['nome'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="text" class="form_style" id="senha<?=$row['cpf'];?>" name="senha" value="<?=$row['senha'];?>"></div>
+                                <div class="corpo"><input type="text" size="15"class="form_style" id="senha<?=$row['cpf'];?>" name="senha" value="<?=$row['senha'];?>"></div>
                             </td>
                             <td>
-                                <div class="corpo"><input type="submit" class="botaologin" value="Alterar">
+                                <div class="corpo"><input type="submit" class="botaologin" value="ALTERAR">
                             </div>
                             </td>
                         </form>
                         <form method="post" action="delete.php">
                             <input type="hidden" name="cpf" value="<?=$row['cpf'];?>">
-                            <td><input type="submit" class="botaologin" value="apagar"></td>
+                            <td><input type="submit" class="botaologin" value="APAGAR"></td>
                         </form>
                     </tr>
                     <?php
