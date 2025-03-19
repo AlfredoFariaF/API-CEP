@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Titulo</title>
+    <link rel="stylesheet" href="css_login.css">
+    <script>
+        function buscarCEP() {
+            const cep = document.getElementById("cep").value;
+            if (!cep) {
+                alert("Por favor, insira um CEP.");
+                return;
+            }
+           
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        alert("CEP não encontrado!");
+                        return;
+                    }
+                    document.getElementById("rua").textContent = data.logradouro || "-";
+                    document.getElementById("bairro").textContent = data.bairro || "-";
+                    document.getElementById("city").textContent = data.localidade || "-";
+                    document.getElementById("uf").textContent = data.uf || "-";
+                })
+                .catch(error => alert("Erro ao buscar o CEP!"));
+        }
+    </script>
+</head>
+<body>
+        <fieldset>
+            <h1 class="login">CONSULTA DE CEP</h1><br><br>
+            <label for="cep"><h2>CEP:</h2></label>
+            <input type="text" class="form_style" id="cep" placeholder="01001000"><br><br><br>
+            <button class="botaologin" onclick="buscarCEP()">Buscar</button><br>
+            <div id="margem">
+                <h2>Logradouro: <span id="rua"></span></h2>
+                <h2>Bairro: <span id="bairro"></span></h2>
+                <h2>Cidade: <span id="city"></span></h2>
+                <h2>Estado: <span id="uf"></span></h2>
+            </div>
+            <br>
+        </fieldset>
+</body>
+</html>
